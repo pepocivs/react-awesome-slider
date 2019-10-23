@@ -15,14 +15,14 @@ export default class Media extends React.Component {
 
     let background = null;
     if (media.url) {
-      if (media.url.match(/gif|jp(e)?g|png|webp/)) {
+      if (media.url.toLowerCase().match(/gif|jp(e)?g|png|webp/)) {
         background = (
           <img
             alt={media.alt || media.title || null}
             src={media.url}
           />);
       }
-      if (media.url.match(/mp4/)) {
+      if (media.url.toLowerCase().match(/mp4/)) {
         background = (
           <video
             title={media.title}

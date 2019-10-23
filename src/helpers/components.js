@@ -27,10 +27,10 @@ export class MediaLoader {
       this.resolve = resolve;
       this.loading = true;
       this.ended = false;
-      if (url.match(/\.(mp4|webm)/i)) {
+      if (url.toLowerCase().match(/\.(mp4|webm)/i)) {
         this.video.setAttribute('src', url);
       }
-      if (url.match(/\.(png|jp(e)?g|gif|webp)/i)) {
+      if (url.toLowerCase().match(/\.(png|jp(e)?g|gif|webp)/i)) {
         this.image.src = url;
         if (this.image.width > 0 || this.image.height > 0) {
           resolve(true);
