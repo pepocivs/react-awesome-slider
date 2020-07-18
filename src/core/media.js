@@ -14,10 +14,16 @@ export default class Media extends React.Component {
     } = this.props;
 
     let background = null;
+    let backgroundBlured = null;
     if (media.url) {
       if (media.url.toLowerCase().match(/gif|jp(e)?g|png|webp/)) {
         background = (
           <img
+            alt={media.alt || media.title || null}
+            src={media.url}
+          />);
+        backgroundBlured = (
+          <img class="blured"
             alt={media.alt || media.title || null}
             src={media.url}
           />);
@@ -38,6 +44,7 @@ export default class Media extends React.Component {
         className={className}
         style={media.style || null}
       >
+        {backgroundBlured}
         {background}
         {media.children && (
           <div

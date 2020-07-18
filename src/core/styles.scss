@@ -109,6 +109,9 @@ $content-background-color: #2f2f2f;
       width: 35%;
       height: auto;
     }
+    img.blured {
+      position: absolute;
+    }
   }
   &__content {
     @extend %fill-parent;
