@@ -23,7 +23,7 @@ export default class Media extends React.Component {
             src={media.url}
           />);
         backgroundBlured = (
-          <img class="blured"
+          <img className="blured"
             alt={media.alt || media.title || null}
             src={media.url}
           />);
